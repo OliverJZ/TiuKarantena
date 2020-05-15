@@ -61,52 +61,48 @@
     </header>
 
     <main>
-        <div class="divhl">
-            <div class="div1"> 
-                <h1>Ako fungujeme</h1>
-                <hr>
+        <div class="items">
+            <div class="image">
+                <div class="nahlad">
+                    <img src="../img/produkt1.jpg" alt="foto3">
+                </div>
+            </div>
+            <div class="info">
+                <div class="nazov">
+                    <h1>Air Jordan 1 Shattered Backboard</h1>
+                </div>
+                <div class="popis">
+                    <p>Model Jordan 1 v špecifickom farebnom prevedení s názvom Shattered backboard sa naposledy dostal na pulty predajní v roku 2015 a od vtedy jeho cena len stúpa. Shattered backboard nie je len náhodný názov a farby. Toto prevedenie sa viaže k zápasu Michaela Jordana z roku 1986 kde pri tom ako sa zavesil na kôš rozbil tabuľu ktorá je za košom a v tomto zápase mal na sebe jeho tím špeciálne oranžovo-čierne dresy a tak vzniklo toto klasické prevedenie.
+                    </p>
+                </div>
+                <div class="farby">
+                    <div class="farba" id="orange"></div>
+                    <div class="farba" id="black"></div>
+                    <div class="farba" id="white"></div>
+                </div>
+                <div class="buy">
+                    <div class="cena">
+                        <p>1400€</p>
+                    </div>
+                    <div class="kvantita">
+                        <button class="plus-btn" type="button" name="button">
+                            <p>+</p>
+                        </button>
+                        <input type="text" name="name" value="1">
+                        <button class="minus-btn" type="button" name="button">
+                            <p>-</p>
+                        </button>
+                    </div>
+                    <div class="buybtn">
+                        <a href="../html/cart.html"><button class="buy-btn" type="button" name="button"><p>Pridat do kosika</p></button></a>
+                    </div>
+                </div>
+                <div class="fav">
+                    <p>Pridat k oblubenym </p>
+                    <i class="fas fa-heart"></i>
+                </div>
             </div>
 
-            <div class="div2">
-                <iframe src="https://www.youtube.com/embed/4YvFSitPTk4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-
-            <!--<div class="div3">
-                <img src="../img/foto5.jpg" alt="foto5">
-            </div>-->
-
-            <div class="div4"> 
-                <h1>Kto sme?</h1>
-                <hr>
-
-            </div>
-            <div class="div5"> 
-                <p>
-                    Vitaj na oficiálnej stránke najkvalitnejšieho sneaker obchodu nie len na Slovensku ale v celej strednej Európe. Začínali sme ako dvojica fanatikov do tenisiek, ktorý za tým nikdy nevideli biznis alebo peniaze len čistú vášeň pre zbieranie a nosenie limitovaných tenisiek. Presne to je jeden z hlavných dôvodov preco sme tak úspešní, nepodľahli sme peniazom, ponúkam od veľkých firiem či neprajníkom stále to robíme z vášne a radosti, ktorú chceme šíriť ďalej.
-                </p>
-
-            </div>
-            <div class="div6"> 
-                <img src="../img/mainphoto2.png" alt="foto6">
-            </div>
-            <div class="div7"> 
-                <h1>Prečo my?</h1>
-                <hr>
-
-                
-
-            </div>
-            <div class="div8"> 
-                <p>
-                    Tenisky sme začali predávať okolo roku 2014, keď sme ich už doslova nemali kde dávať. Začali sme sa zbavovať kúskov, ktoré sme nosili najmenej no ľudí to tak chytilo, že od nás chceli stále viac a viac limitiek. Preto sme sa rozhodli založiť si online obchod kde sa podelíme o našu kolekciu a pomôžeme našim zákazníkom zohnať ten najväčší fire na ich nohy. Ľudia od nás kupujú lebo sa do tenisiek vyznáme, máme ľudské ceny, máme najlimitovanejšie kúsky a hlavne preto lebo vedia, že tenisky sú náš život. Pridaj sa do našej rodiny a nakúp v LogicSharde aj ty.
-                </p>
-
-            </div>
-            <div class="div9"> 
-                <img src="../img/mainphoto1.png" alt="foto3">
-                
-
-            </div>
         </div>
     </main>
     
@@ -153,6 +149,8 @@
     <script>
         set();
         $(".tlacidlo").click(show);
+        $(".fav").click(color);
+        var srdce;
 
         function show(){
             $(".dropcontent").slideToggle();
@@ -163,6 +161,18 @@
     
             $(".div2 iframe").css("height", height);
         }
+
+        function color(){
+            if(srdce != 1){
+                srdce = 1;
+                $(".fav i").css("color", "red");
+            }else{
+                srdce--;
+                $(".fav i").css("color", "grey");
+            }
+            
+        }
+
     </script>
 </body>
 </html>
